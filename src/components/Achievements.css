@@ -1,0 +1,176 @@
+/* Container */
+.achievements-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 60px;
+
+    /* Ensure background fills the entire site */
+    background: url("https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg") no-repeat center center fixed;
+    background-size: cover; /* Ensures the image covers the entire container */
+    width: 100vw; /* Full viewport width */
+    min-height: 100vh; /* Full viewport height */
+    margin: 0; /* Removes any margin that may cause white spaces */
+    box-sizing: border-box; /* Include padding in width/height */
+}
+
+/* Reset global margins and paddings */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevents horizontal scroll due to overflow */
+}
+
+/* Trophy Section */
+.trophy-section {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.trophy-img {
+    width: 100%;
+    max-width: 300px;
+    animation: floatTrophy 3s infinite ease-in-out, rotateTrophy 10s infinite linear;
+}
+
+/* Floating Animation */
+@keyframes floatTrophy {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Rotation Animation */
+@keyframes rotateTrophy {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+/* Achievements Content */
+.achievements-content {
+    width: 70%;
+}
+
+.achievements-header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a3f7a;
+    margin-bottom: 30px;
+    animation: slideInHeader 1s ease-out;
+}
+
+/* Slide-in Animation for Header */
+@keyframes slideInHeader {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Achievement Item */
+.achievement-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    background-color: #f9fcff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Hover Effects */
+.achievement-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Number Box */
+.number-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(to right, #3b82f6, #1e3a8a);
+    border-radius: 8px;
+    margin-right: 20px;
+    animation: bounceNumber 2s infinite;
+}
+
+/* Bounce Animation for Number Box */
+@keyframes bounceNumber {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Achievement Text */
+.achievement-text h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a3f7a;
+    margin: 0 0 5px;
+}
+
+.achievement-text p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .achievements-container {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .trophy-section, .achievements-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .achievement-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .number-box {
+        margin-bottom: 10px;
+    }
+}

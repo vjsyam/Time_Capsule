@@ -1,0 +1,158 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f3f8fc; /* Light background for body */
+  color: #333; /* Default dark text */
+}
+
+/* View Letters Container */
+.view-letters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  min-height: 100vh; /* Full screen height */
+  background: url("https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg") no-repeat center center fixed;
+  background-size: cover; /* Ensures the background image fills the container */
+  color: #fff; /* White text for contrast */
+  border-radius: 10px;
+  box-sizing: border-box; /* Ensures padding doesn't add extra width */
+}
+
+/* Header */
+.view-letters h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #f9f9f9; /* Soft white */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for readability */
+}
+
+/* Error Message */
+.view-letters p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #ffcccc; /* Light red for errors */
+  background: rgba(255, 0, 0, 0.2); /* Subtle background for error messages */
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+/* Letter Envelope Container */
+.letter {
+  position: relative;
+  background: #ffffff; /* Envelope body color */
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  padding: 20px;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 800px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+/* Envelope Triangle (Top Flap) */
+.letter::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  height: 50px;
+  background: #ffffff;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Creates the triangle */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  z-index: 1;
+}
+
+/* Envelope Bottom Flap (Optional) */
+.letter::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  height: 50px;
+  background: #ffffff;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+/* Inner Letter Content */
+.letter-content {
+  position: relative;
+  z-index: 2; /* Ensure content stays above pseudo-elements */
+  padding: 10px;
+}
+
+.letter-content h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1a73e8; /* Google Blue */
+  margin-bottom: 10px;
+}
+
+.letter-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 10px 0;
+  color: #555; /* Neutral text color */
+}
+
+/* Attachments Section */
+.letter-content p:last-child {
+  font-style: italic;
+  color: #777; /* Muted gray for attachments */
+}
+
+/* Hover Effect on Envelope */
+.letter:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .view-letters h1 {
+      font-size: 2.5rem;
+  }
+
+  .letter {
+      padding: 15px;
+  }
+
+  .letter-content h2 {
+      font-size: 1.5rem;
+  }
+
+  .letter-content p {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .view-letters h1 {
+      font-size: 2rem;
+  }
+
+  .letter {
+      padding: 10px;
+  }
+
+  .letter-content h2 {
+      font-size: 1.2rem;
+  }
+
+  .letter-content p {
+      font-size: 0.85rem;
+  }
+}

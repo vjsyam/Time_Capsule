@@ -1,0 +1,103 @@
+/* === Community Page Container === */
+.community-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.6); /* Slight overlay for text readability */
+    border-radius: 10px;
+
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    background: url("https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+}
+
+/* === Header === */
+.community-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #f0f8ff; /* Light color for better visibility */
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* === Letters List === */
+.community-letters-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* === Individual Letter Card === */
+.community-letter-card {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background with opacity */
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    color: #333;
+}
+
+/* Hover Effect */
+.community-letter-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* === Profile Picture === */
+.community-profile-pic img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid #4c91ff;
+}
+
+/* === Content === */
+.community-letter-content {
+    flex: 1;
+}
+
+.community-user-name {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333333;
+}
+
+.community-letter-snippet {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555555;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    .community-header {
+        font-size: 2rem;
+    }
+    .community-letter-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .community-profile-pic img {
+        margin: 0 0 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .community-header {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,253 @@
+/* General Landing Page Styles */
+.landing-page {
+  background-image: url("https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.moving-text {
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.content-text {
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Profile Section */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 50px auto;
+  gap: 30px;
+  padding: 10px;
+}
+
+.profile-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image {
+  width: 150px; /* Adjust the size as needed */
+  height: 150px; /* Adjust the size as needed */
+  border-radius: 50%; /* Makes the image round */
+  object-fit: cover; /* Ensures the image doesn't stretch or distort */
+  border: none; /* Remove any border or rectangle frame */
+  margin-bottom: 10px; /* Adjust the space between the image and name */
+}
+
+.profile-name {
+  text-align: center;
+  font-size: medium;
+  font-weight: bold;
+  color:black;
+}
+
+.profile-role {
+  text-align: center; /* Adjust the font weight if needed */
+  color:black;
+  font-weight: bold; /* Adjust color to be more subtle */
+  margin-top: 5px; /* Space between name and role */
+  font-size: 1rem; /* Adjust the font size */
+}
+
+
+
+.linkedin-btn {
+  color: #0077b5;
+  margin-top: 5px;
+}
+
+/* Social Icons */
+/* Social Icon Styles */
+/* Social Icons Section */
+/* Social Icons Container */
+/* Social Icons Container */
+.social-icons {
+  position: absolute; /* Absolute positioning relative to the viewport */
+  top: 20px; /* Distance from the top */
+  left: 20px; /* Distance from the left */
+  display: flex; /* Flexbox for horizontal layout */
+  gap: 15px; /* Spacing between icons */
+  z-index: 1000; /* Ensure the icons appear above other elements */
+}
+
+/* Facebook Official Design */
+.facebook-icon {
+  color: #1877F2; /* Official Facebook Blue */
+  font-size: 2rem; /* Icon size */
+  transition: transform 0.2s, color 0.2s; /* Smooth hover effect */
+}
+.facebook-icon:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Twitter Official Design */
+.twitter-icon {
+  color: #1DA1F2; /* Official Twitter Blue */
+  font-size: 2rem;
+  transition: transform 0.2s, color 0.2s;
+}
+.twitter-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Instagram Official Design */
+.instagram-icon {
+  color: #E4405F; /* Official Instagram Red-Pink */
+  font-size: 2rem;
+  transition: transform 0.2s, color 0.2s;
+}
+.instagram-icon:hover {
+  transform: scale(1.1);
+}
+
+
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(50px); /* Start from the right edge */
+  }
+  100% {
+    transform: translateX(-35%); /* End at the left edge */
+  }
+}
+
+/* Adjustments for Spacing */
+.action-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Login/Signup Container */
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 40px 80px 40px;
+  border: solid 0.5px black;
+  border-radius: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.599);
+  background-color: rgba(0, 0, 0, 0.33);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: popUp 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Enhanced pop-up animation */
+}
+
+.heading {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.inputGroup p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputField {
+  flex: 1;
+  padding: 10px;
+  margin: 10px 0 20px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.loginButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: #00000063;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loginButton:hover {
+  background-color: #ffffff98;
+  color: #000000;
+}
+
+.signupButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: #00000098;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signupButton:hover {
+  background-color: #ffffff8e;
+  color: rgb(0, 0, 0);
+}
+
+.signupLink {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.errorMessage {
+  color: rgb(255, 255, 255);
+  margin-bottom: 15px;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.glass-card {
+  animation: popIn 1s ease-in-out;
+}
